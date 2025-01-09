@@ -1,0 +1,104 @@
+C:\Users\JESR_\miniconda3\Scripts\
+C:\Users\JESR_\anaconda3\Scripts\
+
+C:\Users\JESR_\miniconda3\Scripts\conda --versión
+
+C:\ProgramData\anaconda3>conda --versión
+
+https://github-com.translate.goog/clawpack/geoclaw_tutorial_csdms2024?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=wapp
+
+docker pull clawpack/v5.9.0_dockerimage:release
+
+python -c "import clawpack; print(clawpack.__version__)"
+
+conda activate geoclaw_env
+
+docker run -i -t -p 8889:8889 --name clawpack-v5.9.0_container \ clawpack/v5.9.0_dockerimage:release
+docker run -i -t -p 8889:8889 --name contenedor_chile clawpack/v5.9.0_dockerimage:release
+
+
+docker volume create Navolato_volume
+
+docker volume create Chile_volume
+
+
+
+docker run -i -t -p 8893:8893 --name contenedor_simulacion_navolato --mount source=Navolato_volume,target=/app/dataVolumeNavolato clawpack/v5.9.0_dockerimage:release
+
+docker run -i -t -p 8889:8889 --name contenedor_simulacion_chile --mount source=Chile_volume,target=/app/dataVolumeChile clawpack/v5.9.0_dockerimage:release
+
+
+
+docker start -i contenedor_simulacion_navolato
+
+
+
+
+/home/jovyan/clawpack-v5-9-0/geoclaw/examples/tsunami/chile2010
+
+
+dtopo_usgs100227.tt3  etopo10min120W60W60S0S.asc  README.txt
+jovyan $ pwd
+/home/jovyan/clawpack-v5-9-0/geoclaw/scratch
+
+docker cp contenedor_simulacion_navolato:/app/dataVolumeNavolato/directorio C:\Users\TuUsuario\Desktop\
+
+
+docker cp contenedor_2:/home/jovyan/clawpack-v5-9-0 C:\Users\TuUsuario\Desktop\ D:\Simulacion
+
+docker cp contenedor_simulacion_navolato_1:/home/jovyan/clawpack-v5-9-0/geoclaw/examples/tsunami/chile2010/setrun.py E:\Simulacion
+
+
+docker cp a <nombre-o-id-del-contenedor>:<ruta-destino-en-contenedor>
+
+__
+--docker cp E:\Simulacion\input\dtopoNavolato.tt3 contenedor_simulacion_navolato:/home/jovyan/clawpack-v5-9-0/geoclaw/scratch/
+
+docker cp E:\Simulacion\input\batimetriaSRTM15masV21Navolato.asc contenedor_simulacion_navolato:/home/jovyan/clawpack-v5-9-0/geoclaw/scratch/
+
+docker start contenedor_simulacion_navolato
+
+docker exec contenedor_simulacion_navolato mkdir -p /home/jovyan/clawpack-v5-9-0/geoclaw/examples/tsunami/navolato
+
+docker cp E:\Simulacion\input\Makefile contenedor_simulacion_navolato:/home/jovyan/clawpack-v5-9-0/geoclaw/examples/tsunami/navolato/
+
+docker cp E:\Simulacion\input\setrun.py contenedor_simulacion_navolato:/home/jovyan/clawpack-v5-9-0/geoclaw/examples/tsunami/navolato/
+
+docker cp E:\Simulacion\input\setplot.py contenedor_simulacion_navolato:/home/jovyan/clawpack-v5-9-0/geoclaw/examples/tsunami/navolato/
+
+docker cp E:\Simulacion\input\maketopo.py contenedor_simulacion_navolato:/home/jovyan/clawpack-v5-9-0/geoclaw/examples/tsunami/navolato/
+
+docker start -i contenedor_simulacion_navolato
+
+__
+__
+
+docker cp E:\Simulacion\input\navolato\ contenedor_simulacion_navolato:/home/jovyan/clawpack-v5-9-0/geoclaw/examples/tsunami/
+
+docker start -i contenedor_simulacion_navolato
+
+cp ./clawpack-v5-9-0/geoclaw/examples/tsunami/navolato/batimetriaSRTM15masV21Navolato.asc ./clawpack-v5-9-0/geoclaw/scratch/
+
+__
+__
+
+
+docker cp contenedor_simulacion_navolato:/home/jovyan/clawpack-v5-9-0/geoclaw E:\Simulacion\Prueba24SimulacionNavolato
+
+____
+
+
+C:\Users\pcsal\Downloads\ffmpeg-master-latest-win64-gpl\ffmpeg-master-latest-win64-gpl\bin>ffmpeg -framerate 10 -i frame%04dfig0.png -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -pix_fmt yuv420p Simulacion 6.69.mp4
+
+__
+
+
+
+
+
+
+
+
+
+
+
